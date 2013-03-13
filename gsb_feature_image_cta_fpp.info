@@ -1,0 +1,9 @@
+name = GSB Feature Image CTA FPP
+description = This creates the image cta feature fpp
+core = 7.x
+package = GSB
+php = 5.2.4
+version = 7.x-1.0
+project = gsb_feature_image_cta_fpp
+dependencies[] = features
+
