@@ -304,7 +304,11 @@ function gsb_feature_image_cta_fpp_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'gsb_image_cta_fpp',
-      'default_value' => NULL,
+      'default_value' => array(
+        0 => array(
+          'value' => 'Purple',
+        ),
+      ),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -368,7 +372,11 @@ function gsb_feature_image_cta_fpp_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'gsb_image_cta_fpp',
-      'default_value' => NULL,
+      'default_value' => array(
+        0 => array(
+          'value' => 'Top',
+        ),
+      ),
       'deleted' => '0',
       'description' => '',
       'display' => array(
