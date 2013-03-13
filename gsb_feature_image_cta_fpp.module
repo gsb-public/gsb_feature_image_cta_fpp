@@ -22,3 +22,22 @@ function gsb_feature_image_cta_fpp_entity_info_alter(&$entity_info) {
     ),
   );
 }
+
+/**
+ * Implements hook_form_alter()
+ */
+function gsb_feature_image_cta_fpp_form_alter(&$form, &$form_state, $form_id) {
+
+  if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form' && $form['#bundle'] == 'gsb_image_cta_fpp') {
+
+      $form['field_editorial_summary']['und'][0]['value']['#states'] = array(
+        'visible' => array(
+          ':input[name="field_text_position[und]"]' => array(
+            array('value' => 'Top'),
+          ),
+        ),
+      );
+
+  }
+
+}
