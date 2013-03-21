@@ -503,6 +503,7 @@ function gsb_feature_image_cta_fpp_field_default_fields() {
       'module' => 'list',
       'settings' => array(
         'allowed_values' => array(
+          'Red' => 'Red',
           'Purple' => 'Purple',
           'Green' => 'Green',
           'Blue' => 'Blue',
@@ -517,7 +518,7 @@ function gsb_feature_image_cta_fpp_field_default_fields() {
       'bundle' => 'gsb_image_cta_fpp',
       'default_value' => array(
         0 => array(
-          'value' => 'Purple',
+          'value' => 'Red',
         ),
       ),
       'deleted' => '0',
