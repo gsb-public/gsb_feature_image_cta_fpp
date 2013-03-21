@@ -30,13 +30,21 @@ function gsb_feature_image_cta_fpp_form_alter(&$form, &$form_state, $form_id) {
 
   if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form' && $form['#bundle'] == 'gsb_image_cta_fpp') {
 
-      $form['field_editorial_summary']['und'][0]['value']['#states'] = array(
-        'visible' => array(
-          ':input[name="field_text_position[und]"]' => array(
-            array('value' => 'Top'),
-          ),
+    $form['field_destination_name']['und'][0]['value']['#states'] = array(
+      'visible' => array(
+        ':input[name="field_image_cta_style[und]"]' => array(
+          array('value' => 'GSBSpotlight'),
         ),
-      );
+      ),
+    );
+
+    $form['field_image_cta_spotlight_style']['und']['#states'] = array(
+      'visible' => array(
+        ':input[name="field_image_cta_style[und]"]' => array(
+          array('value' => 'GSBSpotlight'),
+        ),
+      ),
+    );
 
   }
 
