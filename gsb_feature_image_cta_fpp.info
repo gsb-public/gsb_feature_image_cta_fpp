@@ -15,6 +15,3 @@ dependencies[] = text
 datestamp = 1364304577
 features[features_api][] = api:1
 features[field][] = fieldable_panels_pane-gsb_image_cta_fpp-field_editorial_summary
-features[field][] = fieldable_panels_pane-gsb_image_cta_fpp-field_image_cta_link
-features[field][] = fieldable_panels_pane-gsb_image_cta_fpp-field_text_background_color
-features[field][] = fieldable_panels_pane-gsb_image_cta_fpp-field_text_position
