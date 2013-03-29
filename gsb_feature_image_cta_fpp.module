@@ -1,8 +1,10 @@
 <?php
 /**
  * @file
- * Drupal needs this blank file.
+ * Code for the GSB Feature Image CTA FPP feature.
  */
+
+include_once 'gsb_feature_image_cta_fpp.features.inc';
 
 /**
  * Implements hook_entity_alter().
