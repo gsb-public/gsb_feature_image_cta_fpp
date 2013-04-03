@@ -10,14 +10,92 @@
 function gsb_feature_image_cta_fpp_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'fieldable_panels_pane-gsb_image_cta_fpp-field_content_image'.
-  $fields['fieldable_panels_pane-gsb_image_cta_fpp-field_content_image'] = array(
+  // Exported field: 'fieldable_panels_pane-image_cta-field_body'.
+  $fields['fieldable_panels_pane-image_cta-field_body'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_content_image',
+      'field_name' => 'field_body',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'text_long',
+    ),
+    'field_instance' => array(
+      'bundle' => 'image_cta',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(
+            'conditions' => array(),
+          ),
+          'type' => 'text_default',
+          'weight' => 9,
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'fieldable_panels_pane',
+      'field_name' => 'field_body',
+      'label' => 'Description',
+      'required' => 1,
+      'settings' => array(
+        'linkit' => array(
+          'enable' => 0,
+          'insert_plugin' => '',
+        ),
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'maxlength_js' => '150',
+          'maxlength_js_enforce' => 0,
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+          'maxlength_js_truncate_html' => 0,
+          'rows' => '3',
+        ),
+        'type' => 'text_textarea',
+        'weight' => '5',
+      ),
+      'workbench_access_field' => 0,
+    ),
+  );
+
+  // Exported field: 'fieldable_panels_pane-image_cta-field_file_single_public'.
+  $fields['fieldable_panels_pane-image_cta-field_file_single_public'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_file_single_public',
       'foreign keys' => array(
         'fid' => array(
           'columns' => array(
@@ -32,28 +110,28 @@ function gsb_feature_image_cta_fpp_field_default_fields() {
         ),
       ),
       'locked' => '0',
-      'module' => 'image',
+      'module' => 'file',
       'settings' => array(
-        'default_image' => 0,
+        'display_default' => 0,
+        'display_field' => 0,
         'uri_scheme' => 'public',
       ),
       'translatable' => '0',
-      'type' => 'image',
+      'type' => 'file',
     ),
     'field_instance' => array(
-      'bundle' => 'gsb_image_cta_fpp',
+      'bundle' => 'image_cta',
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'hidden',
-          'module' => 'image',
+          'label' => 'above',
+          'module' => 'file',
           'settings' => array(
-            'image_link' => '',
-            'image_style' => '',
+            'conditions' => array(),
           ),
-          'type' => 'image',
-          'weight' => '0',
+          'type' => 'file_default',
+          'weight' => 5,
         ),
         'ical' => array(
           'label' => 'above',
@@ -63,18 +141,14 @@ function gsb_feature_image_cta_fpp_field_default_fields() {
         ),
       ),
       'entity_type' => 'fieldable_panels_pane',
-      'field_name' => 'field_content_image',
-      'label' => 'Content Image',
+      'field_name' => 'field_file_single_public',
+      'label' => 'Image',
       'required' => 1,
       'settings' => array(
-        'alt_field' => 0,
-        'default_image' => 0,
-        'file_directory' => '',
+        'description_field' => 0,
+        'file_directory' => 'media-center',
         'file_extensions' => 'png gif jpg jpeg',
         'max_filesize' => '',
-        'max_resolution' => '',
-        'min_resolution' => '',
-        'title_field' => 0,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -98,61 +172,69 @@ function gsb_feature_image_cta_fpp_field_default_fields() {
             'gsb_media_browser--images' => 0,
             'gsb_media_browser--videos' => 0,
             'gsb_media_center_document' => 0,
-            'gsb_media_center_image' => 0,
+            'gsb_media_center_image' => 'gsb_media_center_image',
             'gsb_media_center_video' => 0,
             'media_default--media_browser_1' => 0,
             'media_default--media_browser_my_files' => 0,
             'media_internet' => 0,
             'upload' => 0,
           ),
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
           'progress_indicator' => 'throbber',
         ),
         'type' => 'media_generic',
-        'weight' => '1',
+        'weight' => '4',
       ),
       'workbench_access_field' => 0,
     ),
   );
 
-  // Exported field: 'fieldable_panels_pane-gsb_image_cta_fpp-field_editorial_summary'.
-  $fields['fieldable_panels_pane-gsb_image_cta_fpp-field_editorial_summary'] = array(
+  // Exported field: 'fieldable_panels_pane-image_cta-field_image_cta_bg_color'.
+  $fields['fieldable_panels_pane-image_cta-field_image_cta_bg_color'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_editorial_summary',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
+      'field_name' => 'field_image_cta_bg_color',
+      'foreign keys' => array(),
       'indexes' => array(
-        'format' => array(
-          0 => 'format',
+        'value' => array(
+          0 => 'value',
         ),
       ),
       'locked' => '0',
-      'module' => 'text',
-      'settings' => array(),
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          'blue' => 'Blue',
+          'dark-teal' => 'Dark Teal',
+          'green' => 'Green',
+          'purple' => 'Purple',
+        ),
+        'allowed_values_function' => '',
+      ),
       'translatable' => '0',
-      'type' => 'text_long',
+      'type' => 'list_text',
     ),
     'field_instance' => array(
-      'bundle' => 'gsb_image_cta_fpp',
-      'default_value' => NULL,
+      'bundle' => 'image_cta',
+      'default_value' => array(
+        0 => array(
+          'value' => 'purple',
+        ),
+      ),
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'hidden',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => '3',
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(
+            'conditions' => array(),
+          ),
+          'type' => 'list_default',
+          'weight' => 7,
         ),
         'ical' => array(
           'label' => 'above',
@@ -162,38 +244,105 @@ function gsb_feature_image_cta_fpp_field_default_fields() {
         ),
       ),
       'entity_type' => 'fieldable_panels_pane',
-      'field_name' => 'field_editorial_summary',
-      'label' => 'Editorial Summary',
-      'required' => 0,
+      'field_name' => 'field_image_cta_bg_color',
+      'label' => 'Text Background Color',
+      'required' => 1,
       'settings' => array(
-        'linkit' => array(
-          'enable' => 0,
-          'insert_plugin' => '',
-        ),
-        'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
-        'module' => 'text',
+        'module' => 'options',
         'settings' => array(
-          'rows' => '5',
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
         ),
-        'type' => 'text_textarea',
-        'weight' => '5',
+        'type' => 'options_select',
+        'weight' => '2',
       ),
       'workbench_access_field' => 0,
     ),
   );
 
-  // Exported field: 'fieldable_panels_pane-gsb_image_cta_fpp-field_image_cta_link'.
-  $fields['fieldable_panels_pane-gsb_image_cta_fpp-field_image_cta_link'] = array(
+  // Exported field: 'fieldable_panels_pane-image_cta-field_image_cta_text_pos'.
+  $fields['fieldable_panels_pane-image_cta-field_image_cta_text_pos'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_image_cta_link',
+      'field_name' => 'field_image_cta_text_pos',
+      'foreign keys' => array(),
+      'indexes' => array(
+        'value' => array(
+          0 => 'value',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'list',
+      'settings' => array(
+        'allowed_values' => array(
+          'top' => 'Top',
+          'bottom' => 'Bottom',
+        ),
+        'allowed_values_function' => '',
+      ),
+      'translatable' => '0',
+      'type' => 'list_text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'image_cta',
+      'default_value' => array(
+        0 => array(
+          'value' => 'top',
+        ),
+      ),
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'list',
+          'settings' => array(
+            'conditions' => array(),
+          ),
+          'type' => 'list_default',
+          'weight' => 8,
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'fieldable_panels_pane',
+      'field_name' => 'field_image_cta_text_pos',
+      'label' => 'Text Position',
+      'required' => 1,
+      'settings' => array(
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'options',
+        'settings' => array(
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        ),
+        'type' => 'options_select',
+        'weight' => '1',
+      ),
+      'workbench_access_field' => 0,
+    ),
+  );
+
+  // Exported field: 'fieldable_panels_pane-image_cta-field_link_single'.
+  $fields['fieldable_panels_pane-image_cta-field_link_single'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_link_single',
       'foreign keys' => array(),
       'indexes' => array(),
       'locked' => '0',
@@ -217,17 +366,19 @@ function gsb_feature_image_cta_fpp_field_default_fields() {
       'type' => 'link_field',
     ),
     'field_instance' => array(
-      'bundle' => 'gsb_image_cta_fpp',
+      'bundle' => 'image_cta',
       'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'hidden',
+          'label' => 'above',
           'module' => 'link',
-          'settings' => array(),
+          'settings' => array(
+            'conditions' => array(),
+          ),
           'type' => 'link_default',
-          'weight' => '1',
+          'weight' => 6,
         ),
         'ical' => array(
           'label' => 'above',
@@ -237,7 +388,7 @@ function gsb_feature_image_cta_fpp_field_default_fields() {
         ),
       ),
       'entity_type' => 'fieldable_panels_pane',
-      'field_name' => 'field_image_cta_link',
+      'field_name' => 'field_link_single',
       'label' => 'Link',
       'required' => 1,
       'settings' => array(
@@ -251,12 +402,12 @@ function gsb_feature_image_cta_fpp_field_default_fields() {
         'display' => array(
           'url_cutoff' => '80',
         ),
-        'enable_tokens' => 1,
+        'enable_tokens' => 0,
         'linkit' => array(
           'enable' => 0,
           'insert_plugin' => '',
         ),
-        'title' => 'optional',
+        'title' => 'none',
         'title_maxlength' => '128',
         'title_value' => '',
         'url' => 0,
@@ -266,147 +417,11 @@ function gsb_feature_image_cta_fpp_field_default_fields() {
       'widget' => array(
         'active' => 0,
         'module' => 'link',
-        'settings' => array(),
+        'settings' => array(
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+        ),
         'type' => 'link_field',
-        'weight' => '2',
-      ),
-      'workbench_access_field' => 0,
-    ),
-  );
-
-  // Exported field: 'fieldable_panels_pane-gsb_image_cta_fpp-field_text_background_color'.
-  $fields['fieldable_panels_pane-gsb_image_cta_fpp-field_text_background_color'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_text_background_color',
-      'foreign keys' => array(),
-      'indexes' => array(
-        'value' => array(
-          0 => 'value',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'list',
-      'settings' => array(
-        'allowed_values' => array(
-          'Purple' => 'Purple',
-          'Green' => 'Green',
-          'Blue' => 'Blue',
-          'Dark Teal' => 'Dark Teal',
-        ),
-        'allowed_values_function' => '',
-      ),
-      'translatable' => '0',
-      'type' => 'list_text',
-    ),
-    'field_instance' => array(
-      'bundle' => 'gsb_image_cta_fpp',
-      'default_value' => array(
-        0 => array(
-          'value' => 'Purple',
-        ),
-      ),
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'list',
-          'settings' => array(),
-          'type' => 'list_default',
-          'weight' => '4',
-        ),
-        'ical' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'fieldable_panels_pane',
-      'field_name' => 'field_text_background_color',
-      'label' => 'Text Background Color',
-      'required' => 1,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_buttons',
         'weight' => '3',
-      ),
-      'workbench_access_field' => 0,
-    ),
-  );
-
-  // Exported field: 'fieldable_panels_pane-gsb_image_cta_fpp-field_text_position'.
-  $fields['fieldable_panels_pane-gsb_image_cta_fpp-field_text_position'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_text_position',
-      'foreign keys' => array(),
-      'indexes' => array(
-        'value' => array(
-          0 => 'value',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'list',
-      'settings' => array(
-        'allowed_values' => array(
-          'Top' => 'Top',
-          'Bottom' => 'Bottom',
-        ),
-        'allowed_values_function' => '',
-      ),
-      'translatable' => '0',
-      'type' => 'list_text',
-    ),
-    'field_instance' => array(
-      'bundle' => 'gsb_image_cta_fpp',
-      'default_value' => array(
-        0 => array(
-          'value' => 'Top',
-        ),
-      ),
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'list',
-          'settings' => array(),
-          'type' => 'list_default',
-          'weight' => '2',
-        ),
-        'ical' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'fieldable_panels_pane',
-      'field_name' => 'field_text_position',
-      'label' => 'Text Position',
-      'required' => 1,
-      'settings' => array(
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_buttons',
-        'weight' => '4',
       ),
       'workbench_access_field' => 0,
     ),
@@ -414,8 +429,8 @@ function gsb_feature_image_cta_fpp_field_default_fields() {
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('Content Image');
-  t('Editorial Summary');
+  t('Description');
+  t('Image');
   t('Link');
   t('Text Background Color');
   t('Text Position');
