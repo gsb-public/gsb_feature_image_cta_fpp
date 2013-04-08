@@ -50,7 +50,7 @@ function gsb_feature_image_cta_fpp_field_default_fields() {
             'conditions' => array(),
           ),
           'type' => 'text_default',
-          'weight' => '4',
+          'weight' => '5',
         ),
         'full' => array(
           'label' => 'hidden',
@@ -91,7 +91,7 @@ function gsb_feature_image_cta_fpp_field_default_fields() {
           'rows' => '3',
         ),
         'type' => 'text_textarea',
-        'weight' => '5',
+        'weight' => '6',
       ),
       'workbench_access_field' => 0,
     ),
@@ -326,7 +326,7 @@ function gsb_feature_image_cta_fpp_field_default_fields() {
           'label' => 'hidden',
           'settings' => array(),
           'type' => 'hidden',
-          'weight' => '4',
+          'weight' => '3',
         ),
         'full' => array(
           'label' => 'hidden',
@@ -404,7 +404,7 @@ function gsb_feature_image_cta_fpp_field_default_fields() {
             'conditions' => array(),
           ),
           'type' => 'link_default',
-          'weight' => '5',
+          'weight' => '6',
         ),
         'full' => array(
           'label' => 'hidden',

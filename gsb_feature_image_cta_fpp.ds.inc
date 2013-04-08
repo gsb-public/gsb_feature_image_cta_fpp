@@ -75,7 +75,7 @@ function gsb_feature_image_cta_fpp_ds_layout_settings_info() {
       ),
       'right' => array(
         1 => 'group_wrapper',
-        2 => 'title',
+        2 => 'field_title',
         3 => 'field_body',
         4 => 'field_link_single',
       ),
@@ -83,7 +83,7 @@ function gsb_feature_image_cta_fpp_ds_layout_settings_info() {
     'fields' => array(
       'field_file_single_public' => 'left',
       'group_wrapper' => 'right',
-      'title' => 'right',
+      'field_title' => 'right',
       'field_body' => 'right',
       'field_link_single' => 'right',
     ),

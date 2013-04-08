@@ -25,7 +25,7 @@ function gsb_feature_image_cta_fpp_field_group_info() {
     'children' => array(
       0 => 'field_body',
       1 => 'field_link_single',
-      2 => 'title',
+      2 => 'field_title',
     ),
     'format_type' => 'div',
     'format_settings' => array(

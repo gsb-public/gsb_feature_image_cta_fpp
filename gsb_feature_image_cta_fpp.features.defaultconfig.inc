@@ -49,8 +49,8 @@ function gsb_feature_image_cta_fpp_defaultconfig_strongarm() {
       'display' => array(
         'title' => array(
           'default' => array(
-            'weight' => '3',
-            'visible' => TRUE,
+            'weight' => '5',
+            'visible' => FALSE,
           ),
           'full' => array(
             'weight' => '1',
