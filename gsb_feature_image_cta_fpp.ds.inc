@@ -17,19 +17,6 @@ function gsb_feature_image_cta_fpp_ds_field_settings_info() {
   $ds_fieldsetting->bundle = 'image_cta';
   $ds_fieldsetting->view_mode = 'default';
   $ds_fieldsetting->settings = array(
-    'field_body' => array(
-      'formatter_settings' => array(
-        'ft' => array(
-          'func' => 'theme_ds_field_expert',
-          'ow' => TRUE,
-          'ow-el' => 'span',
-          'ow-cl' => '',
-          'ow-def-cl' => TRUE,
-          'ow-at' => '',
-          'ow-def-at' => FALSE,
-        ),
-      ),
-    ),
     'field_link_single' => array(
       'formatter_settings' => array(
         'ft' => array(
@@ -76,15 +63,13 @@ function gsb_feature_image_cta_fpp_ds_layout_settings_info() {
       'right' => array(
         1 => 'group_wrapper',
         2 => 'field_title',
-        3 => 'field_body',
-        4 => 'field_link_single',
+        3 => 'field_link_single',
       ),
     ),
     'fields' => array(
       'field_file_single_public' => 'left',
       'group_wrapper' => 'right',
       'field_title' => 'right',
-      'field_body' => 'right',
       'field_link_single' => 'right',
     ),
     'classes' => array(),

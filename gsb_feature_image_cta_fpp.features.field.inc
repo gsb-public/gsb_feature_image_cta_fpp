@@ -10,93 +10,6 @@
 function gsb_feature_image_cta_fpp_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'fieldable_panels_pane-image_cta-field_body'.
-  $fields['fieldable_panels_pane-image_cta-field_body'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_body',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'text',
-      'settings' => array(),
-      'translatable' => '0',
-      'type' => 'text_long',
-    ),
-    'field_instance' => array(
-      'bundle' => 'image_cta',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'hidden',
-          'module' => 'text',
-          'settings' => array(
-            'conditions' => array(),
-          ),
-          'type' => 'text_default',
-          'weight' => '5',
-        ),
-        'full' => array(
-          'label' => 'hidden',
-          'module' => 'text',
-          'settings' => array(
-            'conditions' => array(),
-          ),
-          'type' => 'text_default',
-          'weight' => '3',
-        ),
-        'ical' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'fieldable_panels_pane',
-      'field_name' => 'field_body',
-      'label' => 'Description',
-      'required' => 1,
-      'settings' => array(
-        'linkit' => array(
-          'enable' => 0,
-          'insert_plugin' => '',
-        ),
-        'text_processing' => '0',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'maxlength_js' => '150',
-          'maxlength_js_enforce' => 0,
-          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
-          'maxlength_js_truncate_html' => 0,
-          'rows' => '3',
-        ),
-        'type' => 'text_textarea',
-        'weight' => '6',
-      ),
-      'workbench_access_field' => 0,
-    ),
-  );
-
   // Exported field: 'fieldable_panels_pane-image_cta-field_file_single_public'.
   $fields['fieldable_panels_pane-image_cta-field_file_single_public'] = array(
     'field_config' => array(
@@ -286,6 +199,82 @@ function gsb_feature_image_cta_fpp_field_default_fields() {
     ),
   );
 
+  // Exported field: 'fieldable_panels_pane-image_cta-field_image_cta_text'.
+  $fields['fieldable_panels_pane-image_cta-field_image_cta_text'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_image_cta_text',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'image_cta',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => '8',
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'ds_extras_field_template' => '',
+      'entity_type' => 'fieldable_panels_pane',
+      'field_name' => 'field_image_cta_text',
+      'label' => 'Call To Action Text',
+      'required' => 1,
+      'settings' => array(
+        'linkit' => array(
+          'enable' => 0,
+          'insert_plugin' => '',
+        ),
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'maxlength_js' => 0,
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '6',
+      ),
+      'workbench_access_field' => 0,
+    ),
+  );
+
   // Exported field: 'fieldable_panels_pane-image_cta-field_image_cta_text_pos'.
   $fields['fieldable_panels_pane-image_cta-field_image_cta_text_pos'] = array(
     'field_config' => array(
@@ -404,7 +393,7 @@ function gsb_feature_image_cta_fpp_field_default_fields() {
             'conditions' => array(),
           ),
           'type' => 'link_default',
-          'weight' => '6',
+          'weight' => '8',
         ),
         'full' => array(
           'label' => 'hidden',
@@ -422,6 +411,7 @@ function gsb_feature_image_cta_fpp_field_default_fields() {
           'weight' => 0,
         ),
       ),
+      'ds_extras_field_template' => '',
       'entity_type' => 'fieldable_panels_pane',
       'field_name' => 'field_link_single',
       'label' => 'Link',
@@ -442,9 +432,9 @@ function gsb_feature_image_cta_fpp_field_default_fields() {
           'enable' => 0,
           'insert_plugin' => '',
         ),
-        'title' => 'none',
+        'title' => 'value',
         'title_maxlength' => '128',
-        'title_value' => '',
+        'title_value' => '[fieldable_panels_pane:field-image-cta-text]',
         'url' => 0,
         'user_register_form' => FALSE,
         'validate_url' => 1,
@@ -462,13 +452,93 @@ function gsb_feature_image_cta_fpp_field_default_fields() {
     ),
   );
 
+  // Exported field: 'fieldable_panels_pane-image_cta-field_title'.
+  $fields['fieldable_panels_pane-image_cta-field_title'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_title',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'image_cta',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(
+            'conditions' => array(),
+          ),
+          'type' => 'text_default',
+          'weight' => '7',
+        ),
+        'ical' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'ds_extras_field_template' => '',
+      'entity_type' => 'fieldable_panels_pane',
+      'field_name' => 'field_title',
+      'label' => 'Title',
+      'required' => 0,
+      'settings' => array(
+        'linkit' => array(
+          'enable' => 0,
+          'insert_plugin' => '',
+        ),
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'maxlength_js' => 0,
+          'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '5',
+      ),
+      'workbench_access_field' => 0,
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
-  t('Description');
+  t('Call To Action Text');
   t('Image');
   t('Link');
   t('Text Background Color');
   t('Text Position');
+  t('Title');
 
   return $fields;
 }

@@ -23,9 +23,8 @@ function gsb_feature_image_cta_fpp_field_group_info() {
     'label' => 'Wrapper',
     'weight' => '1',
     'children' => array(
-      0 => 'field_body',
-      1 => 'field_link_single',
-      2 => 'field_title',
+      0 => 'field_link_single',
+      1 => 'field_title',
     ),
     'format_type' => 'div',
     'format_settings' => array(
