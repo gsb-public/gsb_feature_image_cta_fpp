@@ -34,7 +34,7 @@ function gsb_feature_image_cta_fpp_form_alter(&$form, &$form_state, $form_id) {
 
       $language = $form['language']['#value'];
 
-      $form['field_image_cta_text'][$language][0]['value']['#states'] = array(
+      $form['field_title'][$language][0]['value']['#states'] = array(
         'visible' => array(
           ':input[name="field_image_cta_text_pos[' . $language . ']"]' => array(
             array('value' => 'top'),
