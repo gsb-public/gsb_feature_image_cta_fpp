@@ -31,17 +31,15 @@ function gsb_feature_image_cta_fpp_entity_info_alter(&$entity_info) {
 function gsb_feature_image_cta_fpp_form_alter(&$form, &$form_state, $form_id) {
 
   if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form' && $form['#bundle'] == 'image_cta') {
-
-      $language = $form['language']['#value'];
-
-      $form['field_title'][$language][0]['value']['#states'] = array(
-        'visible' => array(
-          ':input[name="field_image_cta_text_pos[' . $language . ']"]' => array(
-            array('value' => 'top'),
-          ),
+    $form['#after_build'][] = 'gsb_feature_image_cta_fpp_edit_button_form_alter';      
+    $language = $form['language']['#value'];
+    $form['field_title'][$language][0]['value']['#states'] = array(
+      'visible' => array(
+        ':input[name="field_image_cta_text_pos[' . $language . ']"]' => array(
+          array('value' => 'top'),
         ),
-      );
-
+      ),
+    );
   }
 
 }
@@ -65,4 +63,11 @@ function gsb_feature_image_cta_fpp_preprocess_fieldable_panels_pane(&$variables)
     // exception instead of using watchdog.
     watchdog('gsb_feature_image_cta_fpp', 'In @function on line @line: "@message"', array('@function' => __FUNCTION__, '@line' => __LINE__, '@message' => $e->getMessage()), WATCHDOG_ERROR);
   }
+}
+
+function gsb_feature_image_cta_fpp_edit_button_form_alter($form) {
+  // Removes the 'edit' button on the content pane edit form
+  $language = $form['language']['#value'];
+  $form['field_file_single_public'][$language][0]['edit']['#access'] = false;
+  return $form;
 }
