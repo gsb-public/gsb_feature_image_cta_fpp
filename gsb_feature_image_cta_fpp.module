@@ -31,8 +31,31 @@ function gsb_feature_image_cta_fpp_entity_info_alter(&$entity_info) {
 function gsb_feature_image_cta_fpp_form_alter(&$form, &$form_state, $form_id) {
 
   if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form' && $form['#bundle'] == 'image_cta') {  
+    $form['field_image_cta_bg_color']['#prefix'] = 
+      '<strong>Check "Stock Content" first to see if the image CTA you need already exists.</strong> ' .
+      '<a href="https://onegsb.stanford.edu/group/gsb-web-authors" target="_blank">View image CTA standards</a> for guidance on using this feature.';  
+    $form['reusable']['admin_title']['#field_suffix'] = 
+      '<div class="description"><strong>Format</strong>: Feature Name: Subject | <strong>Example</strong>: Image CTA: Directions | Parking</div>';
+    $form['reusable']['warning']['#markup'] = '<div class="description">' . 'Check this box if you want to use this feature on other pages.' . '</div>'; 
+    $form['#after_build'][] = 'gsb_feature_image_cta_fpp_after_build_form_alter';
   }
 
+}
+
+/**
+ * After build form handler.
+ *
+ * We use this to fix up the validation form_error message to use the link's label(title).
+ *
+ * @see gsb_feature_image_cta_fpp_form_alter()
+ */
+function gsb_feature_image_cta_fpp_after_build_form_alter($form) {
+  if ($form['#form_id'] == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form' && $form['#bundle'] == 'image_cta') {  
+    $form['field_link_single']['und'][0]['url']['#suffix'] = 
+      '<div class="description">Do not include "http://gsb.stanford.edu/" for links to pages on this site. <strong>Example</strong>: programs/mba</div>';
+    $form['field_link_single']['und'][0]['url']['#title'] = $form['field_link_single']['und']['#title'];
+  }
+  return $form;
 }
 
 /**
