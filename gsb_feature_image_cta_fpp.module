@@ -31,14 +31,6 @@ function gsb_feature_image_cta_fpp_entity_info_alter(&$entity_info) {
 function gsb_feature_image_cta_fpp_form_alter(&$form, &$form_state, $form_id) {
 
   if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form' && $form['#bundle'] == 'image_cta') {  
-    $language = $form['language']['#value'];
-    $form['field_title'][$language][0]['value']['#states'] = array(
-      'visible' => array(
-        ':input[name="field_image_cta_text_pos[' . $language . ']"]' => array(
-          array('value' => 'top'),
-        ),
-      ),
-    );
   }
 
 }
@@ -54,7 +46,6 @@ function gsb_feature_image_cta_fpp_preprocess_fieldable_panels_pane(&$variables)
   // Add classes based on the position and color chosen.
   try {
     $wrapper = entity_metadata_wrapper('fieldable_panels_pane', $variables['elements']['#element']);
-    $variables['classes_array'][] = 'image-cta-position-' . $wrapper->field_image_cta_text_pos->value();
     $variables['classes_array'][] = 'image-cta-color-' . $wrapper->field_image_cta_bg_color->value();
   }
   catch (EntityMetadataWrapperException $e) {

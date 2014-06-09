@@ -21,7 +21,7 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => 'Select the background color that best compliments the most dominant color of the photo. <strong>Default color</strong>: teal',
+    'description' => 'Select the background color that best compliments the most dominant color of the photo. <strong>Default color</strong>: teal (#009C84)',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
@@ -59,7 +59,7 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'options_select',
-      'weight' => 1,
+      'weight' => -9,
     ),
     'workbench_access_field' => 0,
   );
@@ -110,7 +110,7 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => -6,
     ),
     'workbench_access_field' => 0,
   );
@@ -121,7 +121,7 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
     'custom_add_another' => '',
     'custom_remove' => '',
     'deleted' => 0,
-    'description' => '<strong>Dimensions</strong>: 270px by 158px',
+    'description' => '<strong>Dimensions</strong>: 540px by 316px',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -155,7 +155,7 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '',
+      'min_resolution' => '540x316',
       'title_field' => 0,
       'user_register_form' => FALSE,
     ),
@@ -168,7 +168,7 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 4,
+      'weight' => -7,
     ),
     'workbench_access_field' => 0,
   );
@@ -267,19 +267,19 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
         'maxlength_js_label' => 'Content limited to @limit characters, remaining: <strong>@remaining</strong>',
       ),
       'type' => 'link_field',
-      'weight' => 2,
+      'weight' => -8,
     ),
     'workbench_access_field' => 0,
   );
 
   // Translatables
   // Included for use with string extractors like potx.
-  t('<strong>Dimensions</strong>: 270px by 158px');
+  t('<strong>Dimensions</strong>: 540px by 316px');
   t('<strong>Recommended length</strong>: approx. 30 to 40 characters');
   t('Do not include "http://gsb.stanford.edu/" for links to pages on this site. <strong>Example</strong>: programs/mba');
   t('Image');
   t('Link');
-  t('Select the background color that best compliments the most dominant color of the photo. <strong>Default color</strong>: teal');
+  t('Select the background color that best compliments the most dominant color of the photo. <strong>Default color</strong>: teal (#009C84)');
   t('Text');
   t('Text Background Color');
 
