@@ -27,7 +27,7 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
         'label' => 'hidden',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 2,
+        'weight' => 3,
       ),
       'full' => array(
         'label' => 'hidden',
@@ -77,7 +77,7 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
         'label' => 'above',
         'settings' => array(),
         'type' => 'hidden',
-        'weight' => 8,
+        'weight' => 5,
       ),
       'ical' => array(
         'label' => 'above',
@@ -124,7 +124,7 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
     'description' => '<strong>Dimensions</strong>: 540px by 316px',
     'display' => array(
       'default' => array(
-        'label' => 'above',
+        'label' => 'hidden',
         'module' => 'image',
         'settings' => array(
           'conditions' => array(),
@@ -132,7 +132,7 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 9,
+        'weight' => 0,
       ),
       'ical' => array(
         'label' => 'above',
@@ -187,16 +187,6 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(
           'conditions' => array(),
-          'custom_link_to_entity' => '',
-          'custom_prefix' => '',
-          'custom_reverse' => '',
-          'custom_strip_preserve' => '',
-          'custom_strip_tags' => '',
-          'custom_strtolower' => '',
-          'custom_strtoupper' => '',
-          'custom_suffix' => '',
-          'custom_trim' => '',
-          'custom_ucfirst' => '',
         ),
         'type' => 'link_default',
         'weight' => 8,
