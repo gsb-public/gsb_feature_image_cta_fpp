@@ -32,7 +32,7 @@ function gsb_feature_image_cta_fpp_form_alter(&$form, &$form_state, $form_id) {
 
   if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form' && $form['#bundle'] == 'image_cta') {  
     $form['field_image_cta_bg_color']['#prefix'] = 
-      '<strong>Check "Stock Content" first to see if the image CTA you need already exists.</strong> ' .
+      '<strong>Check "Stock Content" first to see if the image CTA you need already exists.</strong></br>' .
       '<a href="https://onegsb.stanford.edu/group/gsb-web-authors" target="_blank">View image CTA standards</a> for guidance on using this feature.';  
     $form['reusable']['admin_title']['#field_suffix'] = 
       '<div class="description"><strong>Format</strong>: Feature Name: Subject | <strong>Example</strong>: Image CTA: Directions | Parking</div>';

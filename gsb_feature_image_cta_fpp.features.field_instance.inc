@@ -266,7 +266,7 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('<strong>Dimensions</strong>: 540px by 316px');
   t('<strong>Recommended length</strong>: approx. 30 to 40 characters');
-  t('Do not include "http://gsb.stanford.edu/" for links to pages on this site. <strong>Example</strong>: programs/mba');
+  t('Check this box if the link is to another domain or to a PDF file.');
   t('Image');
   t('Link');
   t('Select the background color that best compliments the most dominant color of the photo. <strong>Default color</strong>: teal (#009C84)');
