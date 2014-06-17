@@ -180,7 +180,7 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
     'custom_remove' => '',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Do not include "http://gsb.stanford.edu/" for links to pages on this site. <strong>Example</strong>: programs/mba',
+    'description' => 'Check this box if the link is to another domain or to a PDF file.',
     'display' => array(
       'default' => array(
         'label' => 'hidden',
