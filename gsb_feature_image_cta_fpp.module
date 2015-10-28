@@ -29,7 +29,7 @@ function gsb_feature_image_cta_fpp_entity_info_alter(&$entity_info) {
  */
 function gsb_feature_image_cta_fpp_form_alter(&$form, &$form_state, $form_id) {
 
-  if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form' && $form['#bundle'] == 'image_cta') {  
+  if ($form_id == 'fieldable_panels_panes_fieldable_panels_pane_content_type_edit_form' && !empty($form['#bundle']) && $form['#bundle'] == 'image_cta') {
     $form['field_image_cta_bg_color']['#prefix'] = 
       '<strong>Check "Stock Content" first to see if the image CTA you need already exists.</strong></br>' .
       '<a href="https://onegsb.stanford.edu/group/gsb-web-authors" target="_blank">View image CTA standards</a> for guidance on using this feature.';  
