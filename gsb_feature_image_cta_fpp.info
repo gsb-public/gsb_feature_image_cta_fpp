@@ -13,6 +13,7 @@ dependencies[] = file
 dependencies[] = file_entity
 dependencies[] = gsb_feature_base_fields
 dependencies[] = image
+dependencies[] = image_link_formatter
 dependencies[] = link
 dependencies[] = list
 dependencies[] = media

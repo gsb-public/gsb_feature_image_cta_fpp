@@ -10,7 +10,8 @@
 function gsb_feature_image_cta_fpp_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'fieldable_panels_pane-image_cta-field_image_cta_bg_color'
+  // Exported field_instance:
+  // 'fieldable_panels_pane-image_cta-field_image_cta_bg_color'.
   $field_instances['fieldable_panels_pane-image_cta-field_image_cta_bg_color'] = array(
     'bundle' => 'image_cta',
     'custom_add_another' => '',
@@ -64,7 +65,8 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-image_cta-field_image_cta_text'
+  // Exported field_instance:
+  // 'fieldable_panels_pane-image_cta-field_image_cta_text'.
   $field_instances['fieldable_panels_pane-image_cta-field_image_cta_text'] = array(
     'bundle' => 'image_cta',
     'custom_add_another' => '',
@@ -115,7 +117,8 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-image_cta-field_image_single_public'
+  // Exported field_instance:
+  // 'fieldable_panels_pane-image_cta-field_image_single_public'.
   $field_instances['fieldable_panels_pane-image_cta-field_image_single_public'] = array(
     'bundle' => 'image_cta',
     'custom_add_another' => '',
@@ -125,13 +128,13 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
     'display' => array(
       'default' => array(
         'label' => 'hidden',
-        'module' => 'image',
+        'module' => 'image_link_formatter',
         'settings' => array(
           'conditions' => array(),
-          'image_link' => '',
+          'image_link' => 'field_link_single',
           'image_style' => '',
         ),
-        'type' => 'image',
+        'type' => 'image_link_formatter',
         'weight' => 0,
       ),
       'ical' => array(
@@ -192,7 +195,8 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
     'workbench_access_field' => 0,
   );
 
-  // Exported field_instance: 'fieldable_panels_pane-image_cta-field_link_single'
+  // Exported field_instance:
+  // 'fieldable_panels_pane-image_cta-field_link_single'.
   $field_instances['fieldable_panels_pane-image_cta-field_link_single'] = array(
     'bundle' => 'image_cta',
     'custom_add_another' => '',

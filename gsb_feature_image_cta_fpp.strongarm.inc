@@ -34,6 +34,18 @@ function gsb_feature_image_cta_fpp_strongarm() {
       'people_fpp' => array(
         'custom_settings' => FALSE,
       ),
+      'preview' => array(
+        'custom_settings' => FALSE,
+      ),
+      'compact' => array(
+        'custom_settings' => FALSE,
+      ),
+      'expanded' => array(
+        'custom_settings' => FALSE,
+      ),
+      'alumni_featured_content' => array(
+        'custom_settings' => FALSE,
+      ),
     ),
     'extra_fields' => array(
       'form' => array(
