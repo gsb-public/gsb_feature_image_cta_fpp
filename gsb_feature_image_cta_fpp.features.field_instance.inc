@@ -81,6 +81,12 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
         'type' => 'hidden',
         'weight' => 5,
       ),
+      'full' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 5,
+      ),
       'ical' => array(
         'label' => 'above',
         'settings' => array(),
@@ -127,6 +133,17 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
     'description' => '540 x 316 px',
     'display' => array(
       'default' => array(
+        'label' => 'hidden',
+        'module' => 'image_link_formatter',
+        'settings' => array(
+          'conditions' => array(),
+          'image_link' => 'field_link_single',
+          'image_style' => '',
+        ),
+        'type' => 'image_link_formatter',
+        'weight' => 0,
+      ),
+      'full' => array(
         'label' => 'hidden',
         'module' => 'image_link_formatter',
         'settings' => array(
@@ -219,16 +236,6 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
         'module' => 'link',
         'settings' => array(
           'conditions' => array(),
-          'custom_link_to_entity' => '',
-          'custom_prefix' => '',
-          'custom_reverse' => '',
-          'custom_strip_preserve' => '',
-          'custom_strip_tags' => '',
-          'custom_strtolower' => '',
-          'custom_strtoupper' => '',
-          'custom_suffix' => '',
-          'custom_trim' => '',
-          'custom_ucfirst' => '',
         ),
         'type' => 'link_default',
         'weight' => 2,

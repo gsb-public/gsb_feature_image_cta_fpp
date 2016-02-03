@@ -8,7 +8,7 @@
  * Implements hook_field_group_info().
  */
 function gsb_feature_image_cta_fpp_field_group_info() {
-  $export = array();
+  $field_groups = array();
 
   $field_group = new stdClass();
   $field_group->disabled = FALSE; /* Edit this to true to make a default field_group disabled initially */
@@ -39,7 +39,11 @@ function gsb_feature_image_cta_fpp_field_group_info() {
       'formatter' => 'open',
     ),
   );
-  $export['group_wrapper|fieldable_panels_pane|image_cta|default'] = $field_group;
+  $field_groups['group_wrapper|fieldable_panels_pane|image_cta|default'] = $field_group;
 
-  return $export;
+  // Translatables
+  // Included for use with string extractors like potx.
+  t('Wrapper');
+
+  return $field_groups;
 }
