@@ -60,8 +60,8 @@ function gsb_feature_image_cta_fpp_strongarm() {
             'visible' => FALSE,
           ),
           'full' => array(
-            'weight' => '1',
-            'visible' => TRUE,
+            'weight' => '4',
+            'visible' => FALSE,
           ),
         ),
       ),

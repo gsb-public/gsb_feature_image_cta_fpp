@@ -91,5 +91,41 @@ function gsb_feature_image_cta_fpp_ds_layout_settings_info() {
   );
   $export['fieldable_panels_pane|image_cta|default'] = $ds_layout;
 
+  $ds_layout = new stdClass();
+  $ds_layout->api_version = 1;
+  $ds_layout->id = 'fieldable_panels_pane|image_cta|full';
+  $ds_layout->entity_type = 'fieldable_panels_pane';
+  $ds_layout->bundle = 'image_cta';
+  $ds_layout->view_mode = 'full';
+  $ds_layout->layout = 'ds_2col';
+  $ds_layout->settings = array(
+    'regions' => array(
+      'left' => array(
+        0 => 'field_image_single_public',
+      ),
+      'right' => array(
+        1 => 'group_wrapper',
+        2 => 'field_link_single',
+      ),
+    ),
+    'fields' => array(
+      'field_image_single_public' => 'left',
+      'group_wrapper' => 'right',
+      'field_link_single' => 'right',
+    ),
+    'classes' => array(),
+    'wrappers' => array(
+      'left' => 'div',
+      'right' => 'div',
+    ),
+    'layout_wrapper' => 'div',
+    'layout_attributes' => '',
+    'layout_attributes_merge' => 1,
+    'layout_link_attribute' => '',
+    'layout_link_custom' => '',
+    'layout_disable_css' => 0,
+  );
+  $export['fieldable_panels_pane|image_cta|full'] = $ds_layout;
+
   return $export;
 }
