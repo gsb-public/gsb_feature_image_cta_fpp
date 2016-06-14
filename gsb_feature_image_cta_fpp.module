@@ -35,7 +35,9 @@ function gsb_feature_image_cta_fpp_form_alter(&$form, &$form_state, $form_id) {
       '<a href="https://onegsb.stanford.edu/group/gsb-web-authors" target="_blank">View image CTA standards</a> for guidance on using this feature.';  
     $form['reusable']['admin_title']['#field_suffix'] = 
       '<div class="description"><strong>Format</strong>: Feature Name: Subject | <strong>Example</strong>: Image CTA: Directions | Parking</div>';
-    $form['reusable']['warning']['#markup'] = '<div class="description">' . 'Check this box if you want to use this feature on other pages.' . '</div>'; 
+    if ($form['reusable']['reusable']['#default_value'] != "1") {
+      $form['reusable']['warning']['#markup'] = '<div class="description">' . 'Check this box if you want to use this feature on other pages.' . '</div>';
+    }
     $form['#after_build'][] = 'gsb_feature_image_cta_fpp_after_build_form_alter';
   }
 
