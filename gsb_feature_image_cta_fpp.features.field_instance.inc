@@ -251,7 +251,7 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
     'entity_type' => 'fieldable_panels_pane',
     'field_name' => 'field_link_single',
     'label' => 'Link',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'absolute_url' => 1,
       'attributes' => array(
@@ -279,7 +279,7 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
       'title_value' => '[fieldable_panels_pane:field-image-cta-text]',
       'url' => 0,
       'user_register_form' => FALSE,
-      'validate_url' => 1,
+      'validate_url' => 0,
     ),
     'widget' => array(
       'active' => 0,
