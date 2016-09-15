@@ -78,4 +78,5 @@ function gsb_feature_image_cta_fpp_preprocess_fieldable_panels_pane(&$variables)
   }
   $url = $variables['content']['field_link_single'][0]['#element']['url'];
   $variables['content']['field_link_single'][0]['#element']['url'] = utf8_decode(urldecode($url));
+  $variables['content']['field_image_single_public'][0]['#path']['path'] =  utf8_decode(urldecode($variables['content']['field_image_single_public'][0]['#path']['path']));
 }
