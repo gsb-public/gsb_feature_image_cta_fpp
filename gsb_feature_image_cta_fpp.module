@@ -66,7 +66,6 @@ function gsb_feature_image_cta_fpp_preprocess_fieldable_panels_pane(&$variables)
   if ($variables['elements']['#bundle'] != 'image_cta') {
     return;
   }
-
   // Add classes based on the position and color chosen.
   try {
     $wrapper = entity_metadata_wrapper('fieldable_panels_pane', $variables['elements']['#element']);
@@ -77,5 +76,6 @@ function gsb_feature_image_cta_fpp_preprocess_fieldable_panels_pane(&$variables)
     // exception instead of using watchdog.
     watchdog('gsb_feature_image_cta_fpp', 'In @function on line @line: "@message"', array('@function' => __FUNCTION__, '@line' => __LINE__, '@message' => $e->getMessage()), WATCHDOG_ERROR);
   }
+  $url = $variables['content']['field_link_single'][0]['#element']['url'];
+  $variables['content']['field_link_single'][0]['#element']['url'] = utf8_decode(urldecode($url));
 }
-
