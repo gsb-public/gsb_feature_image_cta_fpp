@@ -136,9 +136,13 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
         'label' => 'hidden',
         'module' => 'image_link_formatter',
         'settings' => array(
-          'conditions' => array(),
+          'conditions' => array(
+            0 => array(
+              'condition' => '',
+            ),
+          ),
           'image_link' => 'field_link_single',
-          'image_style' => '',
+          'image_style' => 'compress',
         ),
         'type' => 'image_link_formatter',
         'weight' => 0,
