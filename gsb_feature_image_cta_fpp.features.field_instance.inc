@@ -153,7 +153,7 @@ function gsb_feature_image_cta_fpp_field_default_field_instances() {
         'settings' => array(
           'conditions' => array(),
           'image_link' => 'field_link_single',
-          'image_style' => '',
+          'image_style' => 'compress',
         ),
         'type' => 'image_link_formatter',
         'weight' => 0,
